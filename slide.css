@@ -334,6 +334,7 @@ body {
   overflow: hidden;  /* Ensures images don't overflow the card */
   text-align: center;
   transition: transform 0.3s ease;  /* Smooth transform effect on hover */
+  height:310px;
 }
 
 /* Food item hover effect */
