@@ -33,3 +33,4 @@ var TrandingSlider = new Swiper('.tranding-slider', {
         }
     }
 }
+<input type="text" id="search-bar" placeholder="Search for food..." onkeyup="searchFood()">
