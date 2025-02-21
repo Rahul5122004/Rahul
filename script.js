@@ -20,4 +20,16 @@ var TrandingSlider = new Swiper('.tranding-slider', {
       prevEl: '.swiper-button-prev',
     }
   });
-  
+    function searchFood() {
+    let input = document.getElementById("search-bar").value.toLowerCase();
+    let foodItems = document.getElementsByClassName("food-item");
+
+    for (let i = 0; i < foodItems.length; i++) {
+        let foodName = foodItems[i].getElementsByTagName("h3")[0].innerText.toLowerCase();
+        if (foodName.includes(input)) {
+            foodItems[i].style.display = "block";
+        } else {
+            foodItems[i].style.display = "none";
+        }
+    }
+}
