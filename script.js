@@ -1,4 +1,3 @@
-
 var TrandingSlider = new Swiper('.tranding-slider', {
     effect: 'coverflow',
     grabCursor: true,
@@ -20,7 +19,7 @@ var TrandingSlider = new Swiper('.tranding-slider', {
       prevEl: '.swiper-button-prev',
     }
   });
-    function searchFood() {
+  function searchFood() {
     let input = document.getElementById("search-bar").value.toLowerCase();
     let foodItems = document.getElementsByClassName("food-item");
 
