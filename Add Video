@@ -1,0 +1,53 @@
+Alter recipe.php
+<p>
+    <a href="<?php echo htmlspecialchars($recipe['video_url']); ?>" target="_blank">
+        Watch Recipe Video
+    </a>
+</p>
+<form action="submit_suggestion.php" method="POST">
+    <label for="suggestion">Tell us your suggestion:</label><br>
+    <textarea id="suggestion" name="suggestion" required></textarea><br><br>
+    <input type="hidden" name="recipe_name" value="<?php echo htmlspecialchars($recipe['name']); ?>">
+    <button>Submit Suggestion</button>
+</form>
+
+
+Add new file submit_suggestion.php
+<?php
+include 'db.php'; // Database connection
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $recipe_name = $_POST['recipe_name'];
+    $suggestion = $_POST['suggestion'];
+    // Update recipe table to store suggestions
+    $sql = "UPDATE recipes SET suggestions = CONCAT(IFNULL(suggestions, ''), ?) WHERE name = ?";
+    $stmt = $conn->prepare($sql);
+    $formatted_suggestion = "\n- " . $suggestion; // Add a bullet point format
+    $stmt->bind_param("ss", $formatted_suggestion, $recipe_name);
+    if ($stmt->execute()) {
+        echo "<script>alert('✅ Suggestion submitted successfully!'); window.location.href='index.html';</script>";
+    } else {
+        echo "<p>❌ Error submitting suggestion: " . $conn->error . "</p>";
+    }
+    $stmt->close();
+    $conn->close();
+}
+?>
+
+
+Alter style.CSS
+button{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 15px;
+    background: #8a4baf;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover{
+    background: #732a8f;
+}
