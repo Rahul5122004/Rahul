@@ -3,24 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="signup.css">
+    <title>Signup</title>
+    <link rel="stylesheet" href="loginsignup.css">
 </head>
 <body>
-    <div class="form">
+    <div class="container">
         <h1>Signup</h1>
         <form action="signup.php" method="POST">
-           <p>Enter Username:<input type="Name" name="user"placeholder="Username"></p>
-           <p>Enter your Email:<input type="email" name="email" placeholder="Email address" required=""></p>
-           <p>Enter your Phone no.:<input type="number" name="num" placeholder="Phone Number"></p>
-           <p>Enter your password:<input type="password" name="pass1" placeholder="password"></p>
-           <p>Retype your password:<input type="password" name="pass2" placeholder="password"></p>
-        <center>
-        <button type="Submit" id="Submit">Submit</button>
-        </center>
-    <center>
-    <p>Go To Login<a href="login.html">..Signin</a></p>
-    </center>
-</form>
+            <input type="text" name="user" placeholder="Enter Username" required>
+            <input type="email" name="email" placeholder="Enter Email Address" required>
+            <input type="number" name="num" placeholder="Enter Phone Number" required>
+            <input type="password" name="pass1" placeholder="Enter Password" required>
+            <input type="password" name="pass2" placeholder="Retype Password" required>
+            <button type="submit">Sign Up</button>
+            <p>Already have an account? <a href="login.html">Sign in</a></p>
+        </form>
+    </div>
 </body>
 </html>
