@@ -4,24 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="loginsignup.css">
 </head>
 <body>
-    <div class="form">
-        <h1>SIGNIN FORM</h1>
+    <div class="container">
+        <h1>Sign In</h1>
         <form action="login.php" method="POST">
-            <input type="text" name="usernam" placeholder="Username" required>
-            <input type="password" name="passwords" placeholder="Password" required>
-            <center>
-                <p>Forgot password?</p>
-            </center>
-            <center>
-                <button type="submit" id="login">Sign In</button>
-            </center>
+            <input type="text" name="usernam" placeholder="Enter Username" required>
+            <input type="password" name="passwords" placeholder="Enter Password" required>
+            <button type="submit">Login</button>
+            <p><a href="#">Forgot password?</a></p>
+            <p>Don't have an account? <a href="signup.html">Sign up now</a></p>
         </form>
-        <center>
-            <p>Not a member? <a href="signup.html">Sign up now</a></p>
-        </center>
     </div>
 </body>
 </html>
