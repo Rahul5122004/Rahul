@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 // Connect to food_recipes database (for recipes)
 $recipesConn = new mysqli("localhost", "root", "", "food_recipes");
 
@@ -50,6 +49,7 @@ $recipeResult = $recipesConn->query($recipeQuery);
             <th>Email</th>
             <th>Phone Number</th>
             <th>Password</th>
+            <th>Option</th>
         </tr>
         <?php while ($row = $userResult->fetch_assoc()) { ?>
         <tr>
@@ -57,6 +57,9 @@ $recipeResult = $recipesConn->query($recipeQuery);
             <td><?php echo $row['email']; ?></td>
             <td><?php echo $row['num']; ?></td>
             <td><?php echo $row['pass1']; ?></td>
+            <td>
+                <a href="delete_user.php?email=<?php echo $row['email']; ?>" onclick="return confirm('Are you sure you want to delete this user?')">Delete</a>
+        </td>
         </tr>
         <?php } ?>
     </table>
