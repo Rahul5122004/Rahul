@@ -1,14 +1,34 @@
 <?php
-include 'db.php'; // Database connection
+session_start();
+
+// Connect to food_recipes database (for recipes)
+$recipesConn = new mysqli("localhost", "root", "", "food_recipes");
+
+// Connect to sign database (for signup details)
+$usersConn = new mysqli("localhost", "root", "", "project");
+
+// Check for connection errors
+if ($recipesConn->connect_error) {
+    die("Connection to food_recipes failed: " . $recipesConn->connect_error);
+}
+
+if ($usersConn->connect_error) {
+    die("Connection to sign failed: " . $usersConn->connect_error);
+}
+
+// Check if admin is logged in
 if (!isset($_SESSION['namee'])) {
-    // Fetch all recipes from the database
-    $sql = "SELECT * FROM recipes";
-    $result = $conn->query($sql);
-} else {
-    // Redirect to the admin login page if accessed directly
     header("Location: admin.html");
     exit();
 }
+
+// Fetch user details from sign.signup table
+$userQuery = "SELECT user, email, num, pass1 FROM signup";
+$userResult = $usersConn->query($userQuery);
+
+// Fetch all recipes from food_recipes.recipes table
+$recipeQuery = "SELECT id, name FROM recipes ORDER BY id ASC";
+$recipeResult = $recipesConn->query($recipeQuery);
 ?>
 
 <!DOCTYPE html>
@@ -16,11 +36,32 @@ if (!isset($_SESSION['namee'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin - Manage Recipes</title>
+    <title>Admin - Manage Users & Recipes</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <center>
+    
+    <!-- User Details Section -->
+    <h1>User's Details</h1>
+    <table border="1">
+        <tr>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Phone Number</th>
+            <th>Password</th>
+        </tr>
+        <?php while ($row = $userResult->fetch_assoc()) { ?>
+        <tr>
+            <td><?php echo $row['user']; ?></td>
+            <td><?php echo $row['email']; ?></td>
+            <td><?php echo $row['num']; ?></td>
+            <td><?php echo $row['pass1']; ?></td>
+        </tr>
+        <?php } ?>
+    </table>
+
+    <!-- Manage Recipes Section -->
     <h1>Manage Recipes</h1>
     <table border="1">
         <tr>
@@ -28,7 +69,7 @@ if (!isset($_SESSION['namee'])) {
             <th>Name</th>
             <th>Options</th>
         </tr>
-        <?php while ($row = $result->fetch_assoc()) { ?>
+        <?php while ($row = $recipeResult->fetch_assoc()) { ?>
         <tr>
             <td><?php echo $row['id']; ?></td>
             <td><?php echo $row['name']; ?></td>
@@ -39,5 +80,6 @@ if (!isset($_SESSION['namee'])) {
         </tr>
         <?php } ?>
     </table>
+    </center>
 </body>
 </html>
