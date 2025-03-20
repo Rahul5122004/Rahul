@@ -1,0 +1,107 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Splash Screen */
+.splash-screen {
+    background: linear-gradient(to right,#732a8f, #8a4baf);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-container img {
+    width: 200px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Main Menu Styling */
+body {
+    background: linear-gradient(to right,#732a8f, #8a4baf);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+.container {
+    background: rgba(251, 251, 251, 0.6);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Logo */
+.logo img {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+/* Heading */
+h1 {
+    color: black;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+p {
+    color: black;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Buttons */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+/* Admin Button */
+.admin-btn {
+    background-color: #ff4b5c;
+    color: white;
+}
+
+.admin-btn:hover {
+    background-color: #e04352;
+}
+
+/* User Signup Button */
+.user-btn {
+    background-color: #22c1c3;
+    color: white;
+}
+
+.user-btn:hover {
+    background-color: #1ea6a8;
+}

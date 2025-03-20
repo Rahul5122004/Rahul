@@ -1,0 +1,61 @@
+body {
+    background: linear-gradient(to right,#732a8f, #7927a9);/* Violet Gradient Background */
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* White Container */
+.container {
+    background: white;
+    padding: 30px;
+    width: 350px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* More depth */
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #5a2d82; /* Violet Text */
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #5a2d82;
+    color: white;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #451a65;
+}
+
+p {
+    margin-top: 10px;
+}
+
+p a {
+    color: #5a2d82;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+p a:hover {
+    text-decoration: underline;
+}

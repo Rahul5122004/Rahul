@@ -1,0 +1,476 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+.Backgr
+{
+  background-color: #cac7c7;
+}
+*,
+*::before,
+*::after
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+  justify-content: space-between;
+}
+/* Styling for the nav bar */
+nav {
+  display: flex;
+  background-color: rgb(132, 97, 164);
+  justify-content: space-between;
+  align-items: center;
+  padding: 7px;
+}
+
+/* Heading inside the nav */
+nav h2 {
+  margin: 0;
+  height: 25px;
+  font-size: 22px;
+  color: white;
+}
+
+/* Styling for the unordered list */
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Styling for each list item */
+nav ul li {
+  margin: 0 10px;
+  height: 25px;
+}
+
+/* Styling for anchor tags inside list items */
+nav ul li a {
+  font-size: 17px;
+  text-decoration: none;
+  color: white;
+  display: block;
+  height: 100%;
+  line-height: 25px; /* Centers the text vertically */
+}
+/* Responsive Styles */
+@media (max-width: 768px) {
+  /* Adjust nav bar layout for tablets and smaller screens */
+  nav {
+      flex-direction: column; /* Stack items vertically */
+      align-items: center;  /* Center items horizontally */
+  }
+
+  nav ul {
+      flex-direction: column; /* Stack the list items vertically */
+      align-items: center; /* Center the list items horizontally */
+      margin-top: 10px;
+  }
+
+  nav ul li {
+      margin: 5px 0;  /* Add space between list items */
+      height: auto; /* Allow height to adjust based on content */
+  }
+
+  nav ul li a {
+      padding: 10px 15px; /* Add padding to make links easier to tap */
+      text-align: center;  /* Center the text in the link */
+  }
+
+  nav h2 {
+      font-size: 22px; /* Adjust the font size of the heading on smaller screens */
+  }
+}
+@media (max-width: 480px) {
+  /* Adjust layout for small screens (phones) */
+  nav {
+      padding: 5px; /* Add smaller padding */
+  }
+
+  nav h2 {
+      font-size: 20px; /* Make heading smaller for small devices */
+  }
+
+  nav ul li {
+      margin: 5px 0;  /* Add space between items */
+  }
+
+  nav ul li a {
+      font-size: 16px; /* Make the links a bit larger */
+      padding: 12px 20px;  /* Increase padding for easier tapping */
+  }
+
+  button {
+      width: 100%;  /* Full width button on small screens */
+      margin-top: 10px; /* Add top margin for spacing */
+  }
+}
+:root {
+  --primary: rgb(132, 97, 164);
+  --white: #ffffff;
+  --bg: #f5f5f5;
+}
+
+html {
+  font-size: 50%;
+  font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
+}
+
+@media (min-width: 1440px) {
+  html {
+    zoom: 1.5;
+  }
+}
+
+@media (min-width: 2560px) {
+  html {
+    zoom: 1.7;
+  }
+}
+
+@media (min-width: 3860px) {
+  html {
+    zoom: 2.5;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 1.3rem;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+  background: #797979;
+  transition: all 0.5s ease-in-out;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #222224;
+}
+
+::-webkit-scrollbar-track {
+  background: #f9f9f9;
+}
+
+body {
+  font-size: 1.6rem;
+  background: var(--bg);
+}
+
+.container {
+  max-width: 144rem;
+  padding: 0 1rem;
+  margin: 0 auto;
+  margin-bottom: -70px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.section-heading {
+  font-size: 3rem;
+  color: var(--primary);
+  padding: 2rem 0;
+}
+
+#tranding {
+  padding: 4rem 0;
+}
+
+@media (max-width:1440px) {
+  #tranding {
+    padding: 7rem 0;
+  }
+}
+
+#tranding .tranding-slider {
+  height: 52rem;
+  padding: 2rem 0;
+  position: relative;
+}
+
+@media (max-width:500px) {
+  #tranding .tranding-slider {
+    height: 45rem;
+  }
+}
+
+.tranding-slide {
+  width: 37rem;
+  height: 42rem;
+  position: relative;
+}
+
+@media (max-width:500px) {
+  .tranding-slide {
+    width: 28rem !important;
+    height: 36rem !important;
+  }
+  .tranding-slide .tranding-slide-img img {
+    width: 28rem !important;
+    height: 36rem !important;
+  }
+}
+
+.tranding-slide .tranding-slide-img img {
+  width: 37rem;
+  height: 42rem;
+  border-radius: 2rem;
+  object-fit: cover;
+}
+
+.tranding-slide .tranding-slide-content {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.tranding-slide-content .food-price {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  color: var(--white);
+}
+
+.tranding-slide-content .tranding-slide-content-bottom {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  color: var(--white);
+}
+.swiper-slide-shadow-left,
+.swiper-slide-shadow-right {
+  display: none;
+}
+.tranding-slider-control {
+  position: relative;
+  bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tranding-slider-control .swiper-button-next {
+  left: 58% !important;
+  transform: translateX(-58%) !important;
+}
+
+@media (max-width:990px) {
+  .tranding-slider-control .swiper-button-next {
+    left: 70% !important;
+    transform: translateX(-70%) !important;
+  }
+}
+
+@media (max-width:450px) {
+  .tranding-slider-control .swiper-button-next {
+    left: 80% !important;
+    transform: translateX(-80%) !important;
+  }
+}
+
+@media (max-width:990px) {
+  .tranding-slider-control .swiper-button-prev {
+    left: 30% !important;
+    transform: translateX(-30%) !important;
+  }
+}
+
+@media (max-width:450px) {
+  .tranding-slider-control .swiper-button-prev {
+    left: 20% !important;
+    transform: translateX(-20%) !important;
+  }
+}
+
+.tranding-slider-control .slider-arrow {
+  background: var(--white);
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  left: 42%;
+  transform: translateX(-42%);
+  filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
+}
+
+.tranding-slider-control .slider-arrow ion-icon {
+  font-size: 2rem;
+  color: #222224;
+}
+
+.tranding-slider-control .slider-arrow::after {
+  content: '';
+}
+
+.tranding-slider-control .swiper-pagination {
+  position: relative;
+  width: 15rem;
+  bottom: 1rem;
+}
+
+.tranding-slider-control .swiper-pagination .swiper-pagination-bullet {
+  filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
+}
+
+.tranding-slider-control .swiper-pagination .swiper-pagination-bullet-active {
+  background: var(--primary);
+}
+/* Styling for the food items container */
+.food-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));  /* Responsive columns */
+  gap: 45px;  /* Space between items */
+  padding: 20px;
+  text-align: center;  /* Center-align text inside the cards */
+}
+/* Styling for individual food items */
+.food-item {
+  background-color: #f9f9f9;  /* Light background for food cards */
+  border-radius: 8px;  /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Subtle shadow for 3D effect */
+  overflow: hidden;  /* Ensures images don't overflow the card */
+  text-align: center;
+  transition: transform 0.3s ease;  /* Smooth transform effect on hover */
+  height: 105%;
+}
+/* Food item hover effect */
+.food-item:hover {
+  transform: translateY(-5px);  /* Lift the card up slightly */
+}
+
+/* Styling for food images */
+.food-item img {
+  width: 100%;
+  height: 200px;  /* Fixed height for images */
+  object-fit: cover;  /* Ensures image covers the area without distortion */
+  border-bottom: 2px solid #ddd;  /* Adds a line between image and text */
+}
+
+/* Styling for the title and description */
+.food-item h3 {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.food-item p {
+  font-size: 14px;
+  color: #666;  /* Light grey color for description */
+  margin-bottom: 15px;
+}
+
+.food-item a {
+  text-decoration: none;
+  color: #fff;
+  background-color: #8a4baf;  /* Background color for the link */
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+/* Hover effect for the link */
+.food-item a:hover {
+  background-color: #732a8f;  /* Darker shade when hovered */
+}
+
+/* Make sure text is readable on small screens */
+@media (max-width: 768px) {
+  .food-item img {
+    height: 180px;  /* Slightly smaller image on small screens */
+  }
+
+  .food-item h3 {
+    font-size: 18px;
+  }
+
+  .food-item p {
+    font-size: 13px;
+  }
+}
+.Food h1{
+  font-size:xx-large;
+  margin-top: 20px;
+  margin-top: 50px;
+}
+/* Basic styling for the footer */
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer .footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer .social-links {
+  margin: 10px 0;
+}
+
+.footer .social-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer .social-links a:hover {
+  text-decoration: underline;
+}
+
+.footer p {
+  margin: 5px 0;
+}
+
+.footer a {
+  color: #00BFFF;
+}
+#search-bar{
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  margin: 20px auto;
+  font-size: 16px;
+  border: 2px solid #732a8f; ;
+  border-radius: 25px;
+  outline: none;
+  transition: border-color 0.3s ease-in-out;
+}
+#search-bar:focus {
+  border-color: #0c0c0c;
+  box-shadow: 0 0 8px rgba(17, 17, 17, 0.5);
+}
+
+#search-bar::placeholder {
+  color: #888;
+  font-style: italic;
+}
+.logo {
+  height: 50px; /* Adjust size */
+  width: auto;
+  margin-right: 10px; /* Space between logo and heading */
+  vertical-align: middle;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav h2 {
+  margin: 0;
+  flex-grow: 1; /* Makes sure heading stays centered */
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}

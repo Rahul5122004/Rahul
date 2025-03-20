@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="loginsignup.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Signup</h1>
+        <form action="signup.php" method="POST">
+            <input type="text" name="user" placeholder="Enter Username" required>
+            <input type="email" name="email" placeholder="Enter Email Address" required>
+            <input type="number" name="phone" placeholder="Enter Phone Number" maxlength="10" required>
+            <input type="password" name="pass1" placeholder="Enter Password" required>
+            <input type="password" name="pass2" placeholder="Retype Password" required>
+            <button type="submit">Sign Up</button>
+            <p>Already have an account? <a href="login.html">Sign in</a></p>
+        </form>
+    </div>
+</body>
+</html>

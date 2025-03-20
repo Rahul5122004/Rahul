@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Recipe Recommendation</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="slide.css">
+</head>
+<body>
+<div class="Backgr">
+    <nav>
+    <img src="images/Screenshot 2025-03-05 093110.png" alt="Logo" class="logo">
+    <h2 style="font-family:'Times New Roman', Times, sans-serif;">Food Recipe Recommendation System</h2>
+    <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="login.html">SignIn</a></li>
+        <li><a href="menu.html">SignOut</a></li>
+  </ul>
+    </nav>
+    <div class="Body">
+    <section id="tranding">
+      <div class="container">
+        <div class="swiper tranding-slider">
+          <div class="swiper-wrapper">
+            <!-- Slide-start -->
+            <div class="swiper-slide tranding-slide">
+              <div class="tranding-slide-img">
+                <img src="images/curd-rice-1656941144_9090ca2d96a42ce99db2.webp" alt="Tranding">
+              </div>
+              <div class="tranding-slide-content">
+                <div class="tranding-slide-content-bottom">
+                  <h2 class="food-name">
+                    Curd Rice
+                  </h2>
+                </div>
+              </div>
+            </div>
+            <!-- Slide-end -->
+            <!-- Slide-start -->
+            <div class="swiper-slide tranding-slide">
+              <div class="tranding-slide-img">
+                <img src="images/vathakuzhambu-1656939760_74aac2d0b5655154a824.webp" alt="Tranding">
+              </div>
+              <div class="tranding-slide-content">
+                <div class="tranding-slide-content-bottom">
+                  <h2 class="food-name">
+                    Vathakuzhambu
+                  </h2>
+                </div>
+              </div>
+            </div>
+            <!-- Slide-end -->
+            <!-- Slide-start -->
+            <div class="swiper-slide tranding-slide">
+              <div class="tranding-slide-img">
+                <img src="images/sambar_rice_desktop_main_image_519x620.webp" alt="Tranding">
+              </div>
+              <div class="tranding-slide-content">
+                <div class="tranding-slide-content-bottom">
+                  <h2 class="food-name">
+                    Sambar Rice
+                  </h2>
+                </div>
+              </div>
+            </div>
+            <!-- Slide-end -->
+            <!-- Slide-start -->
+            <div class="swiper-slide tranding-slide">
+              <div class="tranding-slide-img">
+                <img src="images/istockphoto-179085494-612x612.jpg" alt="Tranding">
+              </div>
+              <div class="tranding-slide-content">
+                <div class="tranding-slide-content-bottom">
+                  <h2 class="food-name">
+                    Veg Biriyani
+                  </h2>
+                </div>
+              </div>
+            </div>
+            <!-- Slide-end -->
+            <!-- Slide-start -->
+            <div class="swiper-slide tranding-slide">
+              <div class="tranding-slide-img">
+                <img src="images/Pepper-rasam-Rice.jpg" alt="Tranding">
+              </div>
+              <div class="tranding-slide-content">
+                <div class="tranding-slide-content-bottom">
+                  <h2 class="food-name">
+                    Pepper Rasam
+                  </h2>
+                </div>
+              </div>
+            </div>
+            <!-- Slide-end -->
+            <!-- Slide-start -->
+            <div class="swiper-slide tranding-slide">
+              <div class="tranding-slide-img">
+                <img src="images/paruppu-urundai-kuzhambu2.webp" alt="Tranding">
+              </div>
+              <div class="tranding-slide-content">
+                <div class="tranding-slide-content-bottom">
+                  <h2 class="food-name">
+                    Paruppu urundai
+                  </h2>
+                </div>
+              </div>
+            </div>
+            <!-- Slide-end -->
+            <!-- Slide-start -->
+            <div class="swiper-slide tranding-slide">
+              <div class="tranding-slide-img">
+                <img src="images/Medu-Vada-2-1024x1536.jpg" alt="Tranding">
+              </div>
+              <div class="tranding-slide-content">
+                <div class="tranding-slide-content-bottom">
+                  <h2 class="food-name">
+                    Medu Vada
+                  </h2>
+                </div>
+              </div>
+            </div>
+            <!-- Slide-end -->
+          </div>
+
+          <div class="tranding-slider-control">
+            <div class="swiper-button-prev slider-arrow">
+              <ion-icon name="arrow-back-outline"></ion-icon>
+            </div>
+            <div class="swiper-button-next slider-arrow">
+              <ion-icon name="arrow-forward-outline"></ion-icon>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+    <center>
+      <input type="text" id="search-bar" placeholder="Search for food..." onkeyup="searchFood()">
+  </center>
+  
+    <center><h1>Our Tiffin Recipes</h1></center>
+    <section class="food-items">
+      <div class="food-item">
+          <img src="images/Idli and Dosa.jpg" alt="Food Item 1">
+          <h3>Idli and Dosa</h3>
+          <p>Soft & Crispy Delicacy</p>
+          <a href="recipe.php?name=Idli and Dosa">View Recipe</a>
+      </div>
+      <div class="food-item">
+          <img src="images/idiyappam.jpg" alt="Food Item 2">
+          <h3>Idiyappam</h3>
+          <p>Soft String Hoppers</p>
+          <a href="recipe.php?name=Idiyappam">View Recipe</a>
+      </div>
+      <div class="food-item">
+          <img src="images/Poori.jpg" alt="Food Item 3">
+          <h3>Poori</h3>
+          <p>Puffy Fried Bread</p>
+          <a href="recipe.php?name=Poori">View Recipe</a>
+      </div>
+      <div class="food-item">
+        <img src="images/Ven-Pongal.jpg" alt="Food Item 4">
+        <h3>Ven-Pongal and Vada</h3>
+        <p>Spiced Pongal & Crispy Vada</p>
+        <a href="recipe.php?name=Ven-Pongal and Vada">View Recipe</a>
+    </div>
+    <div class="food-item">
+      <img src="images/Puttu.jpeg" alt="Food Item 5">
+      <h3>Puttu</h3>
+      <p>Soft Steamed Rice Cake</p>
+      <a href="recipe.php?name=Puttu">View Recipe</a>
+  </div>
+  <div class="food-item">
+    <img src="images/chappathi.jpg" alt="Food Item 6">
+    <h3>Chapati Kuruma</h3>
+    <p>Soft Flatbread & Spicy Curry</p>
+    <a href="recipe.php?name=Chapati Kuruma">View Recipe</a>
+</div>
+<div class="food-item">
+  <img src="images/Appam.jpg" alt="Food Item 7">
+  <h3>Appam</h3>
+  <p>Soft & Spongy Rice Pancake</p>
+  <a href="recipe.php?name=Appam">View Recipe</a>
+</div>
+<div class="food-item">
+  <img src="images/Kara Paniyaram.jpg" alt="Food Item 8">
+  <h3>Kara Paniyaram</h3>
+  <p>Spicy & Crispy Rice Dumplings</p>
+  <a href="recipe.php?name=Kara Paniyaram">View Recipe</a>
+</div>
+<div class="food-item">
+  <img src="images/RavaUpma.jpg" alt="Food Item 9">
+  <h3>Rava Upma</h3>
+  <p>Soft & Flavorful Semolina Dish</p>
+  <a href="recipe.php?name=Rava Upma">View Recipe</a>
+</div>
+</section>  
+<center><h1>Our Lunch Recipes</h1></center>
+<section class="food-items">
+<div class="food-item">
+  <img src="images/curd-rice-1656941144_9090ca2d96a42ce99db2.webp" alt="Food Item 1">
+  <h3>Curd Rice</h3>
+  <p>Creamy & Cooling Rice Dish</p>
+  <a href="recipe.php?name=Curd Rice">View Recipe</a>
+</div>
+<div class="food-item">
+  <img src="images/sambar_rice_desktop_main_image_519x620.webp" alt="Food Item 2">
+  <h3>Sambar Rice</h3>
+  <p>Spicy & Tangy Lentil Rice</p>
+  <a href="recipe.php?name=Sambar Rice">View Recipe</a>
+</div>
+<div class="food-item">
+  <img src="images/puliyogare.jpg" alt="Food Item 3">
+  <h3>Puliyodarai Rice</h3>
+  <p>Tangy & Spiced Tamarind Rice</p>
+  <a href="recipe.php?name=Puliyodarai Rice">View Recipe</a>
+</div>
+<div class="food-item">
+  <img src="images/ulundu-sadam.jpg" alt="Food Item 4">
+  <h3>Ulundu Rice</h3>
+  <p>Nutritious & Mild Urad Dal Rice</p>
+  <a href="recipe.php?name=Ulundu Rice">View Recipe</a>
+</div>
+<div class="food-item">
+  <img src="images/coconut-rice.jpg" alt="Food Item 5">
+  <h3>Coconut-Rice</h3>
+  <p>Fragrant & Mild Coconut-Flavored Rice</p>
+  <a href="recipe.php?name=Coconut-Rice">View Recipe</a>
+</div>
+<div class="food-item">
+  <img src="images/paruppu-urundai-kuzhambu2.webp" alt="Food Item 6">
+  <h3>Urundai Kuzhambu</h3>
+  <p>Spicy & Tangy Lentil Dumpling Curry</p>
+  <a href="recipe.php?name=Urundai Kuzhambu">View Recipe</a>
+</div>
+<div class="food-item">
+  <img src="images/puli-kuzhambu-1.jpg" alt="Food Item 7">
+  <h3>Puli Kuzhambu</h3>
+  <p>Tangy & Spicy Tamarind Curry</p>
+  <a href="recipe.php?name=Puli Kuzhambu">View Recipe</a>
+</div>
+<div class="food-item">
+  <img src="images/vathakuzhambu-1656939760_74aac2d0b5655154a824.webp" alt="Food Item 8">
+  <h3>Vathakuzhambu</h3>
+  <p>Spicy & Tangy Tamarind Gravy</p>
+  <a href="recipe.php?name=VathaKuzhambu">View Recipe</a>
+</div>
+<div class="food-item">
+  <img src="images/Sodhi.jpg" alt="Food Item 9">
+  <h3>Tirunelveli Sodhi</h3>
+  <p>Mild & Creamy Coconut Stew</p>
+  <a href="recipe.php?name=Tirunelveli Sodhi">View Recipe</a>
+</div>
+<div class="food-item">
+  <img src="images/Pepper-rasam-Rice.jpg" alt="Food Item 10">
+  <h3>Pepper Rasam</h3>
+  <p>Spicy & Soothing South Indian Soup</p>
+  <a href="recipe.php?name=Pepper Rasam">View Recipe</a>
+</div>
+<div class="food-item">
+  <img src="images/istockphoto-179085494-612x612.jpg" alt="Food Item 11">
+  <h3>Veg Biriyani</h3>
+  <p>Aromatic & Flavorful Spiced Rice</p>
+  <a href="recipe.php?name=Veg Biriyani">View Recipe</a>
+</div>
+<div class="food-item">
+  <img src="images/meals.jpg" alt="Food Item 12">
+  <h3>TN Meals</h3>
+  <p>Traditional Tamil Nadu Lunch Platter</p>
+  <a href="recipe.php?name=TN Meals">View Recipe</a>
+</div>
+  </section>  
+  <center><h1>Our Desserts Recipes</h1></center>
+<section class="food-items">
+<div class="food-item">
+  <img src="images/semiya-payasam.jpg" alt="Food Item 1">
+  <h3>Milk Payasam</h3>
+  <p>Creamy & Sweet Rice Pudding</p>
+  <a href="recipe.php?name=Milk Payasam">View Recipe</a>
+</div>
+<div class="food-item">
+  <img src="images/Achu Murukku.jpeg" alt="Food Item 2">
+  <h3>Achu Murukku</h3>
+  <p>Crispy & Delicate Fried Snack</p>
+  <a href="recipe.php?name=Achu Murukku">View Recipe</a>
+</div>
+<div class="food-item">
+  <img src="images/athirasam.jpg" alt="Food Item 3">
+  <h3>Athirasam</h3>
+  <p>Traditional Sweet Rice Cake</p>
+  <a href="recipe.php?name=Athirasam">View Recipe</a>
+</div>
+<div class="food-item">
+  <img src="images/Nei-urundai.jpg" alt="Food Item 4">
+  <h3>Nei-Urundai</h3>
+  <p>Soft & Melt-in-Mouth Ghee Laddu</p>
+  <a href="recipe.php?name=Nei-Urundai">View Recipe</a>
+</div>
+<div class="food-item">
+  <img src="images/Sweet Panniyaram.jpg" alt="Food Item 5">
+  <h3>Sweet Paniyaram</h3>
+  <p>Soft & Sweet Dumplings</p>
+  <a href="recipe.php?name=Sweet Paniyaram">View Recipe</a>
+</div>
+<div class="food-item">
+  <img src="images/Rava-ladoo.jpg" alt="Food Item 6">
+  <h3>Rava-Ladoo</h3>
+  <p>Quick & Tasty Semolina Sweet</p>
+  <a href="recipe.php?name=Rava-Ladoo">View Recipe</a>
+</div>
+  </section>
+  <center><h1>Our Snacks Recipes</h1></center>
+  <section class="food-items">
+  <div class="food-item">
+    <img src="images/mixture.jpg" alt="Food Item 1">
+    <h3>Mixture</h3>
+    <p>Crunchy & Spicy South Indian Snack Mix</p>
+    <a href="recipe.php?name=Mixture">View Recipe</a>
+  </div>
+  <div class="food-item">
+    <img src="images/murukku.jpg" alt="Food Item 2">
+    <h3>Murukku</h3>
+    <p>Crispy & Crunchy Deep-Fried Snack</p>
+    <a href="recipe.php?name=Murukku">View Recipe</a>
+  </div>
+  <div class="food-item">
+    <img src="images/Karasev.jpg" alt="Food Item 3">
+    <h3>Karasev</h3>
+    <p>Spicy & Crunchy Gram Flour Snack</p>
+    <a href="recipe.php?name=Karasev">View Recipe</a>
+  </div>
+  <div class="food-item">
+    <img src="images/Seeval.jpg" alt="Food Item 4">
+    <h3>Seeval</h3>
+    <p>Spicy & Crispy Ribbon Snack</p>
+    <a href="recipe.php?name=Seeval">View Recipe</a>
+  </div>
+  <div class="food-item">
+    <img src="images/onion-pakoda.jpg" alt="Food Item 5">
+    <h3>Onion-Pakoda</h3>
+    <p>Crispy & Spicy Onion Fritters</p>
+    <a href="recipe.php?name=Onion-Pakoda">View Recipe</a>
+  </div>
+  <div class="food-item">
+    <img src="images/Banana-chips.jpeg" alt="Food Item 6">
+    <h3>Banana-chips</h3>
+    <p>Crispy & Crunchy South Indian Snack</p>
+    <a href="recipe.php?name=Banana-chips">View Recipe</a>
+  </div>
+  </section>  
+  <footer>
+    <div class="footer">
+    <div class="footer-content">
+        <p>&copy; 2025 Food Recipe Recommendation System. All Rights Reserved.</p>
+        <ul>
+            <li><a href="#">Mr.Kandasamy</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
