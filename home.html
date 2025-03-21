@@ -142,6 +142,19 @@
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
+    <div class="message-box" id="recipeMessage">
+      🍽️ Welcome to our <b>limited collection</b> of recipes! Each dish serves <b>3-4 people</b>.  
+      Currently, we have <b>33 delicious recipes</b>, but more will be added soon! Stay tuned! 🎉
+  </div>
+
+  <script>
+      // Show the message with a delay for a smooth effect
+      document.addEventListener("DOMContentLoaded", function() {
+          setTimeout(function() {
+              document.getElementById("recipeMessage").style.display = "block";
+          }, 1000); // Delay of 1 second
+      });
+  </script>
     <center>
       <input type="text" id="search-bar" placeholder="Search for food..." onkeyup="searchFood()">
   </center>
