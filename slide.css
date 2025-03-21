@@ -337,6 +337,30 @@ body {
 .tranding-slider-control .swiper-pagination .swiper-pagination-bullet-active {
   background: var(--primary);
 }
+@keyframes moveText {
+  0% { transform: translateX(-10px); }
+  50% { transform: translateX(10px); }
+  100% { transform: translateX(-10px); }
+}
+h1 {
+  font-size: 32px;
+  color: #190a0a;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  background: linear-gradient(45deg, rgb(132, 97, 164), rgb(132, 97, 164));
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+  animation: moveText 2s infinite alternate ease-in-out;
+  cursor: pointer;
+}
+h1:hover {
+  color: #ffffff;
+  background: linear-gradient(45deg, rgb(132, 97, 164), rgb(132, 97, 164));
+  transform: scale(1.05);
+}
 /* Styling for the food items container */
 .food-items {
   display: grid;
