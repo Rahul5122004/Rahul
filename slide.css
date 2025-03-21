@@ -14,13 +14,6 @@
   text-decoration: none;
   justify-content: space-between;
 }
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: #f8f9fa;
-    margin: 0;
-    padding: 20px;
-}
 .message-box {
     color:#f5f5f5;
     display: none;
